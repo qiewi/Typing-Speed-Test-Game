@@ -48,9 +48,27 @@ body {
     display: flex;
     margin-top: 17px;
     padding: 12px 0;
+    align-items: center;
+    border-top: 1px solid #ccc;
     justify-content: space-between;
 }
 
+.content button {
+    border: none;
+    outline: none;
+    width: 105px;
+    padding: 8px 0;
+    color: #fff;
+    cursor: pointer;    
+    font-size: 16px;
+    border-radius: 5px;
+    background: #17a2b8;
+    transition: transform 0.3s ease;
+}
+
+.content button:active {
+    transform: scale(0.97);
+}
 .content .result-details {
     display: flex;
     width: calc(100% - 140px);
@@ -58,5 +76,32 @@ body {
 }
 
 .result-details li{
+    height: 22px;
+    display: flex;
     list-style: none;
+    align-items: center;
+}
+
+.result-details li:not(:first-child){
+    padding-left: 22px;
+    border-left: 1px solid #ccc;
+}
+
+.result-details li p{
+    font-size: 19px;
+
+}
+
+.result-details li span{
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.result-details li:not(:first-child) span{
+    font-weight: 500;
+}
+
+.result-details li b{
+    font-weight: 500;
 }
