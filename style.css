@@ -71,6 +71,7 @@ body {
     height: 2px;
     width: 100%;
     opacity: 0;
+    border-radius: 5px;
     background: #17a2b8;
     animation: blink 1s ease-in-out infinite;
 }
