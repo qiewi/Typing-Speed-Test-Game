@@ -44,6 +44,43 @@ body {
     word-break: break-all;
 }
 
+.typing-text p span {
+    position: relative;
+}
+
+.typing-text p span.correct {
+    color: #56964f;
+}
+
+.typing-text p span.incorrect {
+    color: #cb3439;
+    background: #ffc0cb;
+    outline: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.typing-text p span.active {
+    color: #17a2b8;
+}
+
+.typing-text p span.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    background: #17a2b8;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes identifier {
+    50%{
+        opacity: 1;
+    }
+}
+
 .content-box .content {
     display: flex;
     margin-top: 17px;
